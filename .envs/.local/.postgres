@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=simulativ
+POSTGRES_USER=kmNfXqqiBErSkKRWnXRBKigvVqulSPco
+POSTGRES_PASSWORD=eVYjIFWKY5uryUEOJ34mG5dOrLLh8JGV264nPZwGRAymjug5HFb2smLVVxRsNLJv
