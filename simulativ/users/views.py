@@ -21,7 +21,8 @@ user_detail_view = UserDetailView.as_view()
 class UserUpdateView(LoginRequiredMixin, UpdateView):
 
     model = User
-    fields = ["name"]
+    # fields = ["name"]
+    fields = ['username', 'email', 'first_name', 'last_name']
 
     def get_success_url(self):
         return reverse("users:detail", kwargs={"username": self.request.user.username})
@@ -48,3 +49,16 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_redirect_view = UserRedirectView.as_view()
+
+
+# class CustomSignupView(SignupView):
+#     model = User
+#     form_class = forms.CustomSignupForm
+#     template_name = 'account/signup.html'
+#
+#     def form_valid(self, form):
+#         return HttpResponseRedirect(self.get_success_url())
+#
+#     def get_success_url(self):
+#         messages.add_message(self.request, messages.SUCCESS, 'Welcome! Please login to your account')
+#         return reverse('account_login')
