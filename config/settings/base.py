@@ -85,6 +85,8 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "rest_framework",
+    "rest_framework.authtoken",
+    "rest_auth",
     "django_countries",
     "phonenumber_field",
 ]
@@ -291,5 +293,14 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+# Django Allauth
 ACCOUNT_FORMS = {'signup': 'simulativ.users.forms.CustomSignupForm'}
-#ACCOUNT_SIGNUP_FORM_CLASS = 'simulativ.users.forms.CustomSignupForm'
+
+# ------------------------------------------------------------------------------
+# Django REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}

@@ -8,7 +8,14 @@ User = getattr(settings, 'AUTH_USER_MODEL')
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    country = CountryField(blank_label='(select country)')
+    country = models.CharField(max_length=20, blank=True)
+    city = models.CharField(max_length=70, blank=True)
+    address1 = models.TextField(blank=True)
+    address2 = models.TextField(blank=True)
+    state = models.CharField(max_length=70, blank=True)
+    region = models.CharField(max_length=70, blank=True)
+    province = models.CharField(max_length=70, blank=True)
+    postal_code = models.CharField(max_length=10, blank=True)
     phone_number = PhoneNumberField(blank=True)
     avatar = models.ImageField(blank=True)
 
