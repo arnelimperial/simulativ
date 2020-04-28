@@ -19,6 +19,7 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
     path("api-auth/", include("rest_framework.urls")),
     path("api/rest-auth/", include("rest_auth.urls")),
+    path("api/rest-auth/registration/", include("rest_auth.registration.urls")),
     path("api/", include("simulativ.profiles.api.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
