@@ -5,8 +5,8 @@ from rest_framework.routers import DefaultRouter
 # profile_list = views.ProfileViewSet.as_view({"get": "list"})
 # profile_detail = views.ProfileViewSet.as_view({"get": "retrieve"})
 router = DefaultRouter()
-router.register(r"profiles", views.ProfileViewSet)
-router.register(r"status", views.ProfileStatusViewSet, basename='status')
+router.register("profiles", views.ProfileViewSet)
+router.register("status", views.ProfileStatusViewSet, basename='status')
 
 urlpatterns =[
     # path("profiles/", views.ProfileList.as_view(), name="profile-list"),

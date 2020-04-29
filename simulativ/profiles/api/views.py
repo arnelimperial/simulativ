@@ -24,8 +24,6 @@ class AvatarUpdateView(generics.UpdateAPIView):
         return profile_object
 
 
-
-
 class ProfileViewSet(
     mixins.ListModelMixin,
     mixins.UpdateModelMixin,
